@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+	<!DOCTYPE hibernate-configuration PUBLIC
+	        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory >
+		<!-- Database connection settings -->
+			
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property> -->
+		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:BAN83</property> -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/Budweiser</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">9835189251</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+<!-- 		<property name="connection.pool_size">1</property> -->
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> -->
+
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- Mapping files -->
+		<!-- <mapping resource="javabeat/net/hibernate/Employee.hbm.xml"/> -->
+
+		<!-- Mapping class -->
+		<mapping class="org.coolstory.nas.domain.Professional" />
+		<mapping class="org.coolstory.nas.domain.Student" />
+		<mapping class="org.coolstory.nas.domain.Sport" />
+		<mapping class="org.coolstory.nas.domain.Category" />
+		<mapping class="org.coolstory.nas.domain.User" />
+
+
+		<!-- Bonecp configuration -->
+<!-- 		<property name="bonecp.idleMaxAge">240</property> -->
+<!-- 		<property name="bonecp.idleConnectionTestPeriod">60</property> -->
+<!-- 		<property name="bonecp.partitionCount">3</property> -->
+<!-- 		<property name="bonecp.acquireIncrement">10</property> -->
+<!-- 		<property name="bonecp.maxConnectionsPerPartition">60</property> -->
+<!-- 		<property name="bonecp.minConnectionsPerPartition">20</property> -->
+<!-- 		<property name="bonecp.statementsCacheSize">50</property> -->
+<!-- 		<property name="bonecp.releaseHelperThreads">3</property> -->
+
+</session-factory>
+</hibernate-configuration>

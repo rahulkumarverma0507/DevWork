@@ -1,0 +1,95 @@
+#flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+#flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+#article {
+    text-align: left;
+}
+
+header {background: black;
+        color:white;
+        text-align:center;
+        background-image: url(../images/horses.jpg);
+        background-repeat: no-repeat;
+        width: 280x;
+        height: 150px; 
+        }
+footer {background: #aaa;
+        color:white;
+        height: 18px; /* .push must be the same height as .footer */
+       }
+#nav {background:#eee;}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+#nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    #nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    #article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+
+.button {
+    background-color: #e7e7e7;
+    border: 2px solid #4CAF50; 
+    color: black;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.snmallButton {
+    background-color: #e7e7e7;
+    border: 2px solid #4CAF50; 
+    color: black;
+    border-radius: 12px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.error-class {
+    color:#FF0000;  /* red */
+}
+
+#smsNotificationdropdown{
+ width:150px;   
+}
